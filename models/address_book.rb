@@ -37,4 +37,3 @@ class AddressBook
 
     entries.delete(index, Entry.new(name, phone_number, email)) #delete new entry
   end
-end
