@@ -16,7 +16,8 @@ class MenuController
     puts "3 - Search for an entry"
     puts "4 - Import entries from a CSV"
     puts "5 - View Entry Number n"
-    puts "6 - Exit"
+    puts "6 - Deletes all entries"
+    puts "7 - Exit"
     print "Enter your selection: "
 
     # #3
@@ -140,6 +141,7 @@ class MenuController
      puts "d - delete entry"
      puts "e - edit this entry"
      puts "m - return to main menu"
+     puts "t - delete all entries"
 
      selection = gets.chomp
 
@@ -181,6 +183,7 @@ def edit_entry(entry)
    puts "Updated entry:"
    puts entry
  end
+
  def search_submenu(entry)
   # #12
   puts "\nd - delete entry"
@@ -200,6 +203,10 @@ def edit_entry(entry)
       system "clear"
       main_menu
     when "m"
+      system "clear"
+      main_menu
+    when "t"
+      demolish
       system "clear"
       main_menu
     else
